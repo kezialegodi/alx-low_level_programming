@@ -1,5 +1,5 @@
-standard input output
 #include <stdio.h>
+standard input ouput
 /**
  * main - entry point
  * Return: 0 after printing the function 
