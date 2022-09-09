@@ -3,21 +3,17 @@
 #include <stdio.h>
 /**
  * main - print if the number is positive, zero, or negetive
- *
  * Description: using the main function
  * this program prints "Programming is postive, zero, or negetive"
  * Return: 0 
  */
 int main(void)
-
 {
 int n;
 int l;
-
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 l = n % 10;
-
 if (l > 5)
 {
 	printf("Last digit of %i is %i and is greater than 5\n" , n, l);
