@@ -4,7 +4,9 @@
  * @ab: input letter
  * Return: Always success
  */
-int _abs(int ab)
+int _abs(int n)
 {
-	return (ab * ((ab > 0) - (ab < 0)));
+	if (n < 0)
+		n = -n;
+	return (n);
 }
