@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _salpha - checks for alphabetical letters
+ * _isalpha - checks for alphabetical letters
  * @c: input letter
- * Return: return 0 or 1 depending on condition
+ * Return: Always success
  */
-int _salpha(int c)
+int _isalpha(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
 		return (1);
