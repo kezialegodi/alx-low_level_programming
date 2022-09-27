@@ -7,12 +7,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int b sum1 = 0, sum2 = 0;
-	for (b = 0; b < size; b++)
+	int i, j, p, l = 0, r = 0;
+	for (i = 0; i < size; i++)
 	{
-		sum1 += a[(size + 1) * b];
-		sum2 += a[(size + 1) * (b + 1)];
+		p =(i * size) + i;
+		l += *(a + p)
 	}
-	printf("%d, %dn", sum1, sum2);
+	for (j = 0; j < size; j++)
+	{
+		p = (j * size) + (size - 1 - j);
+		r += *(a + p)
+	printf("%i, %in", l, r);
 }	
 
