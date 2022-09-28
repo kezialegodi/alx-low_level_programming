@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _increasevar - increases i to find sqrt
- * @i: starts at 1
- * @n: the number
- * Return: i, i + 1, or -1
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number to be used
+ * Return: square root of n
  */
 int _sqrt_recursion(int n)
 {
@@ -12,12 +11,12 @@ int _sqrt_recursion(int n)
 	return (_sqrt(0, n));
 }
 /**
- * _sqrt_recursion - finds sqrt
- * @n: the number
+ * _sqrt_recursion - return the square root of a number
+ * @n: test number
  * @x: squared number
- * Return: -1, 0, or sqrt
+ * Return: the square root of n
  */
-int _sqrt_recursion(int n, int x)
+int _sqrt(int n, int x)
 {
 	if (n > x / 2)
 		return (-1);
