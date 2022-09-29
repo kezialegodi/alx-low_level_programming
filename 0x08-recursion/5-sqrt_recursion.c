@@ -8,7 +8,7 @@ int _sqrt_recursion(int n)
 {
 	if (n == 1 || n == 0)
 		return (n);
-	return (sqrt_recursion(0, n));
+	return (_sqrt(0, n));
 }
 /**
  * _sqrt - return the square root of a number
