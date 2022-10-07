@@ -4,8 +4,8 @@
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string 
- * @n: index
- * Return: char pointer
+ * @n: number of bytes of s2 to copy
+ * Return: char pointer to newly allocated place in memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -32,6 +32,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (k = 0; k < i; k++)
 		s[k] = s1[k];
+	for (k = 0; k < j; k++)
+		s[k + j] = s2[k];
 	s[i + j] = '\0';
 	return (s);
 }
