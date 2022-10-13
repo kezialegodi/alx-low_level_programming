@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * prints_all - prints anything
- * @format: a list of types of arguements passed to the function
- * Return: void
+ * prints_all - prints anything.
+ * @format: a list of all arguements passed to the function.
+ * Return: void.
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
 	unsigned int i;
+	va_list args;
 	char *s, *separator;
 	va_start(args, format);
 	separator = "";
@@ -18,20 +18,20 @@ void print_all(const char * const format, ...)
 	{
 		switch (format[i])
 		{
-			case "c":
+			case 'c':
 				printf("%s%c", va_arg(args int));
 				break;
-			case "i":
+			case 'i':
 				printf("%s%d", va_arg(args, int));
 				break;
-			case "f":
+			case 'f':
 				printf("%s%f", va_arg(args, double));
 				break;
-			case "s"
+			case 's'
 				s = va_arg(args, char *);
 
 				if (s == NULL)
-					S = "(nil)"
+					s = "(nil)"
 					printf("%s%s", separator, s);
 					break;
 			default:
