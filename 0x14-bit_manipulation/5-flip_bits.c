@@ -1,26 +1,22 @@
 #include "main.h"
 /**
- * flip_bits - function returns number of bits needed to flip a number
- * @n: unsigned long int number input
- * @m: unsigned long int number input
- * Return: number of bits needed
+ * flip_bits - flip to get from one number to another
+ * @n: input
+ * @m: bits
+ * Return: 0
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (countbits(n ^ m));
-}
-/**
- * countbits - function returns count of set bits
- * @n: unsigned long int number input
- * Return: count of set bits
- */
-unsigned long int countbits(unsigned long int n)
-{
-	unsigned long int count = 0;
-	while (n)
+	unsigned int count = 0;
+
+	while (n != 0 || m != 0)
 	{
-		count += n & 1;
-		n >>= 1;
+		if ((n & 1) != (m & 1))
+			count++;
+		m = m >> 1;
+		n = n >> 1;
 	}
+
 	return (count);
+
 }
